@@ -1,9 +1,7 @@
 package com.mrzhu.spring.source.code.po;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.util.Date;
 import lombok.Data;
 
@@ -13,7 +11,7 @@ import lombok.Data;
  */
 @TableName(value ="user_info")
 @Data
-public class UserInfo {
+public class UserInfoPO {
     /**
      * 用户ID
      */
@@ -59,36 +57,36 @@ public class UserInfo {
     /**
      * 创建者
      */
-    @TableField(value = "create_user")
+    @TableField(value = "create_user",fill = FieldFill.INSERT)
     private Long create_user;
 
     /**
      * 更新者
      */
-    @TableField(value = "update_user")
+    @TableField(value = "update_user",fill = FieldFill.INSERT_UPDATE)
     private Long update_user;
 
     /**
      * 创建时间
      */
-    @TableField(value = "create_time")
+    @TableField(value = "create_time",fill = FieldFill.INSERT)
     private Date create_time;
 
     /**
      * 更新时间
      */
-    @TableField(value = "update_time")
+    @TableField(value = "update_time",fill = FieldFill.INSERT_UPDATE)
     private Date update_time;
 
     /**
      * 是否删除 | 0、未删除 1、已删除
      */
-    @TableField(value = "is_deleted")
+    @TableField(value = "is_deleted",fill = FieldFill.INSERT)
     private Integer is_deleted;
 
     /**
      * 版本号
      */
-    @TableField(value = "version")
+    @TableField(value = "version",fill = FieldFill.INSERT)
     private Integer version;
 }
