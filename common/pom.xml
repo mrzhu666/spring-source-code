@@ -18,6 +18,21 @@
     </properties>
 
     <dependencies>
+
+        <!--提供基础的Servlet上下文接口和抽象类-->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+        </dependency>
+
         <!--hutool工具包-->
         <dependency>
             <groupId>cn.hutool</groupId>
