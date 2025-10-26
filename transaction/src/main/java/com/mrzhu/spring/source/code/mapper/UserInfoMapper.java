@@ -1,6 +1,6 @@
 package com.mrzhu.spring.source.code.mapper;
 
-import com.mrzhu.spring.source.code.po.UserInfo;
+import com.mrzhu.spring.source.code.po.UserInfoPO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @createDate 2025-10-25 18:21:40
 * @Entity com.mrzhu.spring.source.code.po.UserInfo
 */
-public interface UserInfoMapper extends BaseMapper<UserInfo> {
+public interface UserInfoMapper extends BaseMapper<UserInfoPO> {
 
 }
 

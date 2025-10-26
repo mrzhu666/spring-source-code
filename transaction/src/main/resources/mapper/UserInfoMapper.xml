@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mrzhu.spring.source.code.mapper.UserInfoMapper">
 
-    <resultMap id="BaseResultMap" type="com.mrzhu.spring.source.code.po.UserInfo">
+    <resultMap id="BaseResultMap" type="com.mrzhu.spring.source.code.po.UserInfoPO">
             <id property="user_id" column="user_id" jdbcType="BIGINT"/>
             <result property="real_name" column="real_name" jdbcType="VARCHAR"/>
             <result property="nick_name" column="nick_name" jdbcType="VARCHAR"/>
