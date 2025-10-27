@@ -7,3 +7,8 @@ SET NAMES utf8mb4;
 -- 用户
 source /opt/sql/user.sql;
 source /opt/sql/user_test.sql;
+source /opt/sql/mall.sql;
+source /opt/sql/mall_test.sql;
+
+
+
