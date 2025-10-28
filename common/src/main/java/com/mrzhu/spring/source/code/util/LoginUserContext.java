@@ -13,8 +13,14 @@ public class LoginUserContext {
     private static final Long DEFAULT_SYSTEM_USER_ID = -1L;
     
     public static Long getLoginId() {
+        String LoginId;
         // 如果session存储用户对象，会导致需要依赖会业务模块的实体
-        String LoginId = (String) HttpServletContext.getSession().getAttribute(ATTACHMENT_LOGIN_USER);
+        try{
+            //多线程调用那里会报错不知道为什么，提示对象被回收
+            LoginId = (String) HttpServletContext.getSession().getAttribute(ATTACHMENT_LOGIN_USER);
+        }catch (IllegalStateException e){
+            return DEFAULT_SYSTEM_USER_ID;
+        }
         
         //String LoginId = RpcContext.getServerAttachment().getAttachment(ATTACHMENT_LOGIN_USER);
         if (StringUtils.isBlank(LoginId) || !isLong(LoginId)) {

@@ -14,15 +14,15 @@ import java.util.Date;
 @Component
 public class MybatisPlusMetaObjectHandler implements MetaObjectHandler {
     
-    String DEFAULT_CREATE_TIME = "create_time";
+    String DEFAULT_CREATE_TIME = "createTime";
     
-    String DEFAULT_UPDATE_TIME = "update_time";
+    String DEFAULT_UPDATE_TIME = "updateTime";
     
-    String DEFAULT_CREATE_USER = "create_user";
+    String DEFAULT_CREATE_USER = "createUser";
     
-    String DEFAULT_UPDATE_USER = "update_user";
+    String DEFAULT_UPDATE_USER = "updateUser";
     
-    String DEFAULT_DELETED = "is_deleted";
+    String DEFAULT_DELETED = "isDeleted";
     
     String DEFAULT_VERSION = "version";
     
